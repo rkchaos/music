@@ -70,9 +70,8 @@ songlist.addEventListener('click',function(event){
 })
 let  currentSongIndex=0;
 forward.addEventListener('click',function(event){
-    currentSongIndex = (currentSongIndex + 1) % songs.length;
-    var songId = event.target.getAttribute('id');
-    audio.src = `./assets/song${songId}.mp3`;
+    currentSongIndex = (currentSongIndex+1) % songs.length;
+    audio.src = `./assests/song${currentSongIndex+1}.mp3`;
     audio.currentTime = 0;
     audio.play();
     playBtn.children[0].classList.add('fa-pause');
